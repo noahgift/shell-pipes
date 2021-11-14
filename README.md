@@ -43,12 +43,18 @@ ls -l /wrong/path 2> /dev/null
 ### Reading file parts
 
 ```
-tail -f /var/log/messages
-head -n 2 /var/log/messages
-tail -n 2 /var/log messages
+tail -f tail -f /var/log/dpkg.log
+head -n 2 tail -f /var/log/dpkg.log
+tail -n 2 tail -f /var/log/dpkg.log
 ```
 
+### Using History
 
-
+```
+history | less
+history | grep tail
+!1
+!!
+```
 
 
