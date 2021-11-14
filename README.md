@@ -20,7 +20,9 @@ ls -l /usr/bin && touch newfile.txt
 ### Process files with Pipelines
 
 ```
-echo "1. This is a line\n2. This is a line\n3. This is a line" > lines.txt
+STR=$'1. This is a line\n2. This is a line\n3. This is a line.'
+echo "$STR"
+echo "$STR" > lines.txt
 cat lines.txt | sort -r | less
 cat lines.txt | grep 3
 ```
